@@ -1,0 +1,194 @@
+:root{
+    --ff1: 'Oswald', sans-serif;
+    --ff2:'Open Sans', sans-serif;
+    --brand: #e23e38;
+    --cl1: #353535;
+    --twitter: #1da1f2;
+    --over6 : rgba(0, 0, 0, 0.6);
+    --over8 : rgba(0, 0, 0, 0.8);
+    --over9 : rgba(0, 0, 0, 0.9);
+    --overred: rgba(226, 60, 54, 0.5);
+    --bg1: #dddddd;
+    --bg2: #f1f1f1;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* ======================
+    common css ends
+======================= */
+.osw-reg{
+    font-family: var(--ff1);
+    font-weight: 400;
+}
+.osw-med{
+    font-family: var(--ff1);
+    font-weight: 500;
+}
+.osw-bold{
+    font-family: var(--ff1);
+    font-weight: 700;
+}
+
+.open-reg{
+    font-family: var(--ff2);
+    font-weight: 400;
+}
+
+.fs-13{
+    font-size: 13px;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.fs-22{
+    font-size: 22px;
+}
+.fs-29{
+    font-size: 29px;
+}
+.fs-30{
+    font-size: 30px;
+}
+.fs-40{
+    font-size: 40px;
+}
+.fs-50{
+    font-size: 50px;
+}
+.fs-60{
+    font-size: 60px;
+}
+
+/* ======================
+    font css ends
+======================= */
+.navbar{
+    background: rgba(53, 53, 53, 0.25);
+    top: 30px;
+    z-index: 99999;
+}
+
+.navbar .navbar-brand{
+    background: rgba(241, 241, 241, 0.20);
+    padding: 10px 30px !important;
+    position: absolute;
+    transform: skewX(-35deg);
+}
+
+.navbar .navbar-brand img{
+    transform: skewX(35deg);
+}
+.navbar-light .navbar-nav .nav-link{
+    line-height: 50px;
+    padding: 0 10px;
+    position: relative;
+    color: #fff;
+    transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: var(--cl1);
+}
+
+.navbar-light .navbar-nav .nav-link::before{
+    content: '';
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before{
+    height: 100%;
+}
+.navbar-light .navbar-nav .nav-link.active::before{
+    height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--brand);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all linear 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after{
+    width: 100%;
+}
+.navbar-light .navbar-nav .nav-link.active::after{
+    width: 100%;
+}
+
+/* ======================
+    navbar css ends
+======================= */
+#banner .banner-item{
+    position: relative;
+    z-index: 1;
+    padding-top: 250px;
+    padding-bottom: 115px;
+}
+
+#banner .banner-item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--over6);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+#banner .banner-item h1{
+    color: var(--brand);
+    padding-top: 10px;
+    margin-bottom: 20px !important;
+}
+
+#banner .banner-item .cta-btn{
+    margin-top: 30px;
+}
+
+#banner .banner-item .cta-btn:first-of-type{
+    margin-right: 26px;
+}
+#banner .bg1{
+    background: url(../images/banner-bg-1.jpg) no-repeat center / cover;
+}
+#banner .bg2{
+    background: url(../images/banner-bg-2.jpg) no-repeat center / cover;
+}
+#banner .bg3{
+    background: url(../images/banner-bg-3.jpg) no-repeat center / cover;
+}
+/* ======================
+    banner css ends
+======================= */
