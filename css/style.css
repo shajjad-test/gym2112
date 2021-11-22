@@ -382,3 +382,65 @@ ul{
 /* ======================
     gallery css ends
 ======================= */
+#team{
+    padding-bottom: 80px;
+}
+#team .team-member{
+    margin-top: 65px;
+    transition: all linear 0.4s;
+}
+
+#team .team-member:hover{
+    transform: translateY(-40px);
+}
+
+#team .team-member:hover .card{
+    transition: all linear 0.4s;
+}
+#team .team-member:hover .card{
+    border: 1px solid #dddddd !important;
+}
+
+#team .team-member .team-image .team-overlay{
+    background: var(--overred);
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transform: scale(.95);
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+#team .team-member:hover .team-image .team-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+#team .team-member .team-image .team-overlay a{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transition: all linear 0.4s;
+} 
+
+#team .team-member .team-image .team-overlay a i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#team .team-member .team-image .team-overlay a:hover i{
+    color: var(--twitter);
+}
+
+#team .team-member .card-text{
+    visibility: hidden;
+    transition: all linear 0.4s;
+    opacity: 0;
+} 
+#team .team-member:hover .card-text{
+    visibility: visible;
+    opacity: 1;
+} 
+/* ======================
+    team css ends
+======================= */
