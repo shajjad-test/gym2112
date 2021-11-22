@@ -335,3 +335,50 @@ ul{
 /* ======================
     about css ends
 ======================= */
+#gallery{
+    padding-bottom: 80px;
+} 
+#gallery .gallery-bg{
+    background: url(../images/gallery-bg.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    margin-top: 25px;
+}
+
+#gallery .gallery-bg::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--over8);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+#gallery .gallery-bg .gallery-item{
+    margin-bottom: 30px;
+}
+
+#gallery .gallery-bg .gallery-item .gallery-overlay{
+    background: var(--overred);
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transform: scale(.95);
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+
+#gallery .gallery-bg .gallery-item:hover .gallery-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+#gallery .gallery-bg .gallery-item .gallery-overlay i{
+    color: #fff;
+    font-size: 30px ;
+}
+/* ======================
+    gallery css ends
+======================= */
