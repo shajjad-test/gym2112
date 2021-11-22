@@ -3,6 +3,7 @@
     --ff2:'Open Sans', sans-serif;
     --brand: #e23e38;
     --cl1: #353535;
+    --detail: #777777;
     --twitter: #1da1f2;
     --over6 : rgba(0, 0, 0, 0.6);
     --over8 : rgba(0, 0, 0, 0.8);
@@ -81,6 +82,15 @@ ul{
 
 /* ======================
     font css ends
+======================= */
+.section-head h3{
+    color: var(--cl1);
+}
+.section-head img{
+    margin-top: -5px;
+}
+/* ======================
+    section header css ends
 ======================= */
 .navbar{
     background: rgba(53, 53, 53, 0.25);
@@ -173,9 +183,20 @@ ul{
     margin-bottom: 20px !important;
 }
 
+#banner .bg1 p{
+    padding: 0 50px;
+}
+
 #banner .banner-item .cta-btn{
     margin-top: 30px;
+    transition: all linear 0.4s;
 }
+
+#banner .banner-item .cta-btn:hover{
+    background: var(--brand);
+    border-color: var(--brand);
+}
+
 
 #banner .banner-item .cta-btn:first-of-type{
     margin-right: 26px;
@@ -189,6 +210,128 @@ ul{
 #banner .bg3{
     background: url(../images/banner-bg-3.jpg) no-repeat center / cover;
 }
+
+#banner .bg1 h4::before {
+	content: '';
+	width: 165px;
+	height: 3px;
+	background: var(--brand);
+	position: absolute;
+	left: 35px;
+	top: 20px;
+}
+#banner .bg1 h4::after {
+	content: '';
+	width: 115px;
+	height: 3px;
+	background: var(--brand);
+	position: absolute;
+	right: 35px;
+	top: 20px;
+}
+#banner .bg1 h1::before {
+	content: '';
+	width: 3px;
+	height: 200px;
+	background: var(--brand);
+	position: absolute;
+	left: 35px;
+	top: -15px;
+}
+#banner .bg1 h1::after {
+	content: '';
+	width: 3px;
+	height: 200px;
+	background: var(--brand);
+	position: absolute;
+	right: 35px;
+	top: -15px;
+}
+#banner .bg1 p::before {
+	content: '';
+	width: 75px;
+	height: 3px;
+	background: var(--brand);
+	position: absolute;
+	left: 35px;
+	bottom: -44px;
+}
+#banner .bg1 p::after {
+	content: '';
+	width: 45px;
+	height: 3px;
+	background: var(--brand);
+	position: absolute;
+	right: 35px;
+	bottom: -44px;
+}
+
+#banner .slick-dots{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    padding-left: 0 ;
+    transform: translateX(-50%);
+}
+
+#banner .slick-dots li{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#banner .slick-dots li.slick-active{
+    background-color: var(--brand);
+    border-color: var(--brand);
+    transform: scale(1.2);
+}
+
+#banner .slick-dots li:last-child{
+    margin-right: 0;
+}
+
+#banner .slick-dots li button{
+    font-size: 0;
+    border: none;
+    outline: none;
+}
+
 /* ======================
     banner css ends
+======================= */
+#about{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#about .about-image .about-overlay{
+    background: var(--over6);
+}
+
+#about .about-image .about-overlay i{
+    width: 48px;
+    height: 48px;
+    background: var(--brand);
+    color: var(--cl1);
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#about .about-details p{
+    line-height: 24px;
+    color: var(--detail);
+    padding: 0 55px;
+}
+
+#about .about-details p:first-of-type{
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+/* ======================
+    about css ends
 ======================= */
